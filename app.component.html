@@ -19,28 +19,12 @@
       <div class="search-grid">
         <div>
           <h1 class="title-head">Search TamilNadu</h1>
-          <form class="search-form">
+          
              <label>Location</label><br>
-             <input type="text" placeholder="Enter city, zip, community, or subdivision">
-             <input type="submit" value="submit"><br>
-             <!-- <label>Min. Price</label>
-             <label>Max. Price</label>
-             <label>Beds</label>
-             <label>Baths</label><br>
-             <input type="number">
-             <input type="number">
-             <select>
-              <option></option>
-              <option>1 Bedroom</option>
-              <option>2 Bedrooms</option>
-             </select>
-
-             <select>
-              <option></option>
-              <option>1 Bathroom</option>
-              <option>2 Bathrooms</option>
-             </select> -->
-          </form>
+             <input type="text"  placeholder="Enter city, zip, community, or subdivision" [(ngModel)]="ip">
+            <button (click)="onSelect('ip')"> submit</button>
+            
+    
         </div>
         <div>
           <h2>Search by Area</h2>
@@ -50,21 +34,12 @@
         </div>
       </div>
     </section>
-    <!-- <section class="info-section"> -->
-      <!-- <div class="info-grid"> -->
-        <!-- <div>
-          <h2 class="info-header">Century 21 Real Estate</h2>
-          <p>This project is did by Yuvaraj and Ponnarasu</p>
-        </div> -->
-        <!-- <div class="image-grid">
-          <div><button>Luxury</button></div>
-          <div><button>Lake View</button></div>
-          <div><button>Gallery</button></div>
-          <div><button>Real Estate</button></div>
-        </div> -->
-      <!-- </div> -->
-    <!-- </section> -->
+   
   </body>
 </html>
+
+
+
+<router-outlet></router-outlet>
 
 <app-footer></app-footer>
