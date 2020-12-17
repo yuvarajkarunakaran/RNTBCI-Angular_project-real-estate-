@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="offset-sm-5 col-som-4">
+        <div class="card text-blank">
+            <div class="card-title text-center">
+                <h5>Login using Email</h5>
+            </div>
+
+            <div class="card-text">
+                <form [formGroup]="register">
+                    <div class="form-group">
+                        <label>Email   :   </label>
+                        <input type="email" formControlName="email" [ngClass]="{'is-invalid':submit &amp;&amp; register.controls.email.errors}"/>
+                        <div>
+                          <div *ngIf="submit &amp;&amp; register.controls.email.errors">
+                            <div class="alert alert-danger" *ngIf="register.controls.email.errors.required">
+                              Email is Required
+                            </div>
+                            <div class="alert alert-danger" *ngIf="register.controls.email.errors.email">
+                                Email type Required
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                            
+                  <div class="form-group">
+                        <label>Password   :   </label>
+                        <input type="password" formControlName="password" [ngClass]="{'is-invalid':submit &amp;&amp; register.controls.password.errors}"/>
+                        <div>
+                          <div *ngIf="submit &amp;&amp; register.controls.password.errors">
+                            <div class="alert alert-danger" *ngIf="register.controls.password.errors.required">
+                              Password is Required
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        
+                    <button class="btn btn-success" (click)="onCheck()">Login</button>
+                 
+                </form>
+           </div>
+        </div>
+    </div>
+</div>
