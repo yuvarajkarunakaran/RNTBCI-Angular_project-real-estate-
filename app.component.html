@@ -22,16 +22,19 @@
           
              <label>Location</label><br>
              <input type="text"  placeholder="Enter city, zip, community, or subdivision" [(ngModel)]="ip">
-            <button (click)="onSelect('ip')"> submit</button>
+            <!-- <button (click)="onSelect('ip')" ng-model="sel"> submit</button> -->
             
+            <a routerLinkActive="active" [routerLink]="['/zipcode1',ip]" class="button" ng-model="sel">Submit</a>
     
         </div>
-        <div>
+        <div> 
+          <div ng-hide="sel">
           <h2>Search by Area</h2>
           <p>
             You can search the property through by area also.Just enter city,zipcode,community or sub division
           </p>
         </div>
+      </div>
       </div>
     </section>
    
